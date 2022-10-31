@@ -2,7 +2,7 @@
 
 @section('container')
     
-    <h1 class='mb-5'>{{ $title }}</h1>
+<h1 class='mb-3 text-center'>{{ $title }}</h1>
 
 @if ($posts->count())
 <div class="card mb-3">
@@ -20,9 +20,8 @@
     <a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-primary">Read More</a>
   </div>
 </div>
-@else
-    <p class+"text-center fs-4">No Post Found.</p>
-@endif
+
+
 
 <div class="container">
     <div class="row">
@@ -50,5 +49,9 @@
         @endforeach
     </div>
 </div>
+
+@else
+    <p class+"text-center fs-4">No Post Found.</p>
+@endif
 
 @endsection
